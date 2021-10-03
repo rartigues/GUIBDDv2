@@ -94,7 +94,7 @@ export default class TutorialsList extends Component {
             <input
               type="text"
               className="form-control"
-              placeholder="Search by title"
+              placeholder="Buscar por nombre"
               value={searchTitle}
               onChange={this.onChangeSearchTitle}
             />
@@ -110,7 +110,7 @@ export default class TutorialsList extends Component {
           </div>
         </div>
         <div className="col-md-6">
-          <h4>Tutorials List</h4>
+          <h4>Lista de trabajadores 😎</h4>
 
           <ul className="list-group">
             {tutorials &&
@@ -132,22 +132,22 @@ export default class TutorialsList extends Component {
             className="m-3 btn btn-sm btn-danger"
             onClick={this.removeAllTutorials}
           >
-            Remove All
+            Borrar todos
           </button>
         </div>
         <div className="col-md-6">
           {currentTutorial ? (
             <div>
-              <h4>Tutorial</h4>
+              <h4>Trabajador seleccionado:</h4>
               <div>
                 <label>
-                  <strong>Title:</strong>
+                  <strong>Nombre:</strong>
                 </label>{" "}
                 {currentTutorial.title}
               </div>
               <div>
                 <label>
-                  <strong>Description:</strong>
+                  <strong>Descripcion:</strong>
                 </label>{" "}
                 {currentTutorial.description}
               </div>
@@ -168,7 +168,7 @@ export default class TutorialsList extends Component {
           ) : (
             <div>
               <br />
-              <p>Please click on a Tutorial...</p>
+              <p>Selecciona a un trabajador...</p>
             </div>
           )}
         </div>

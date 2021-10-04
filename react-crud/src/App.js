@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <a href="/tutorials" className="navbar-brand">
-            Dogepoto
+            Beta 1
           </a>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -22,7 +22,7 @@ class App extends Component {
             </li>
             <li className="nav-item">
               <Link to={"/add"} className="nav-link">
-                Add
+                Agregar
               </Link>
             </li>
           </div>

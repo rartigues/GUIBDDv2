@@ -6,6 +6,7 @@ export default class AddTutorial extends Component {
     super(props);
     this.onChangeTitle = this.onChangeTitle.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
+    this.onChangePublished = this.onChangePublished.bind(this);
     this.saveTutorial = this.saveTutorial.bind(this);
     this.newTutorial = this.newTutorial.bind(this);
 
@@ -31,10 +32,18 @@ export default class AddTutorial extends Component {
     });
   }
 
+  onChangePublished(e) {
+    console.log(e.target.value)
+    this.setState({
+      published: e.target.value
+    });
+  }
+
   saveTutorial() {
     var data = {
       title: this.state.title,
-      description: this.state.description
+      description: this.state.description,
+      published: this.state.published
     };
 
     TutorialDataService.create(data)
@@ -89,7 +98,6 @@ export default class AddTutorial extends Component {
                 name="title"
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="description">Descripcion</label>
               <input
@@ -102,7 +110,20 @@ export default class AddTutorial extends Component {
                 name="description"
               />
             </div>
-
+            <div className="form-group">
+              <label htmlFor="published">Trabajando</label>
+              <select
+                className="form-control"
+                id="published"
+                required
+                value={this.state.published}
+                onChange={this.onChangePublished}
+                name="published"
+              >
+                <option value="true">Si</option>
+                <option value="false">No</option>
+              </select>
+            </div>
             <button onClick={this.saveTutorial} className="btn btn-success">
               Agregar
             </button>

@@ -153,9 +153,9 @@ export default class TutorialsList extends Component {
               </div>
               <div>
                 <label>
-                  <strong>Status:</strong>
+                  <strong>Estado:</strong>
                 </label>{" "}
-                {currentTutorial.published ? "Published" : "Pending"}
+                {currentTutorial.published ? "Trabajando" : "No trabajando"}
               </div>
 
               <Link
